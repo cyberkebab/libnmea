@@ -32,6 +32,12 @@ DECLARE_PARSER_API(gpgsa)
 #ifdef ENABLE_GPGSV
 DECLARE_PARSER_API(gpgsv)
 #endif
+#ifdef ENABLE_GPRMB
+DECLARE_PARSER_API(gprmb)
+#endif
+#ifdef ENABLE_ECRMB
+DECLARE_PARSER_API(ecrmb)
+#endif
 #ifdef ENABLE_GPRMC
 DECLARE_PARSER_API(gprmc)
 #endif
@@ -68,6 +74,12 @@ nmea_load_parsers()
 #endif
 #ifdef ENABLE_GPGSV
 	PARSER_LOAD(gpgsv);
+#endif
+#ifdef ENABLE_GPRMB
+	PARSER_LOAD(gprmb);
+#endif
+#ifdef ENABLE_ECRMB
+	PARSER_LOAD(ecrmb);
 #endif
 #ifdef ENABLE_GPRMC
 	PARSER_LOAD(gprmc);
